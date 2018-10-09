@@ -17,15 +17,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.loadingTimeInterVal = @(10);
-//    self.view.loadingImageArr = @[];
+    WFLoadingConfig * config = [[WFLoadingConfig alloc]init];
+    config.loadingMsgTextFont = [UIFont systemFontOfSize:14];
+    config.loadingMsgTextColor = [UIColor grayColor];
+    config.loadingMsg = @"加载中";
+    config.loadingMsgAnimtion = YES;
+    config.failShow = YES;
+    config.failImage = [UIImage imageNamed:@"page_loading15"];
+    config.failMsg = @"网络错误";
+    config.failMsgTextFont = [UIFont systemFontOfSize:14];
+    config.showFailBtn = YES;
+    config.failBtnTitle = @"点击重试";
+    config.btnDelegate = self;
+    config.sel = @selector(sel);
+    self.view.loadingView.config = config;
     [self.view showLoading];
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [self.view hideLoading];
-//    });
- 
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.view stopAnimating];
+    });
     // Do any additional setup after loading the view, typically from a nib.
 }
+-(void)sel{
+    [self show];
+}
+-(void)show{
+    [self.view showLoading];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.view stopAnimating];
+    });
+}
+
 
 
 - (void)didReceiveMemoryWarning {

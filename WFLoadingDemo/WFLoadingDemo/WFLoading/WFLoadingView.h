@@ -7,10 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "WFLoadingConfig.h"
+#import "WFLoadingAnmationView.h"
 @interface WFLoadingView : UIView
-@property (nonatomic,strong) UIImageView * animationView;
+
+@property (nonatomic,strong) WFLoadingConfig * config;
+
 @property (nonatomic,strong) NSArray * loadingImageArr;
 @property (nonatomic,assign) NSTimeInterval timeInterval;
+/**开始动画*/
+-(void)startAnimating;
+/**结束动画*/
+-(void)stopAnimating;
+/**结束动画显示提示页*/
+-(void)hideLoading;
 
 @end

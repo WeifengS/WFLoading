@@ -7,57 +7,56 @@
 //
 
 #import "WFLoadingView.h"
+#import "WFLoadingEmptyView.h"
+@interface WFLoadingView()
+@property (nonatomic,strong) WFLoadingAnmationView  * loadingAnmationView;
+@property (nonatomic,strong) WFLoadingEmptyView     * emptyView ;
+@end
 
 @implementation WFLoadingView
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        [self setUpUI];
+
+-(WFLoadingAnmationView *)loadingAnmationView{
+    if (!_loadingAnmationView) {
+        _loadingAnmationView = [[WFLoadingAnmationView alloc]initWithFrame:self.bounds];
     }
-    return self;
+    return _loadingAnmationView;
 }
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        self.backgroundColor = [UIColor blueColor];
-        
-        [self setUpUI];
+-(WFLoadingEmptyView *)emptyView{
+    if (!_emptyView) {
+        _emptyView = [[WFLoadingEmptyView alloc]initWithFrame:self.bounds];
     }
-    return self;
+    return _emptyView;
 }
--(void)setUpUI{
-    self.loadingImageArr = [self images];
-    self.timeInterval = 3;
-    self.animationView = [[UIImageView alloc]initWithImage:self.loadingImageArr.firstObject];
-    self.animationView.animationImages = self.loadingImageArr;
-    self.animationView.backgroundColor = [UIColor redColor];
-    self.animationView.contentMode = UIViewContentModeScaleAspectFill;
-    [self addSubview:self.animationView];
+
+-(void)startAnimating{
+    [self.emptyView removeFromSuperview];
+    [self addSubview:self.loadingAnmationView];
+    [self.loadingAnmationView.animationView startAnimating];
+}
+-(void)stopAnimating{
+    [self.loadingAnmationView.animationView stopAnimating];
+}
+-(void)showEmptyView{
+
+    [self addSubview:self.emptyView];
+}
+-(void)hideLoading{
+    [self.loadingAnmationView removeFromSuperview];
+    
+    [self showEmptyView];
 }
 -(void)setLoadingImageArr:(NSArray *)loadingImageArr{
-    _loadingImageArr = loadingImageArr;
-    self.animationView.image = loadingImageArr.firstObject;
-    [self.animationView sizeToFit];
-    self.animationView.animationImages = _loadingImageArr;
+    [self.loadingAnmationView wfSetImages:loadingImageArr];
 }
-
-
-
--(NSArray <UIImage*>*)images{
-    NSMutableArray * images = [NSMutableArray array];
-    for (int i = 1; i < 33; i++) {
-        NSString * imageName = [NSString stringWithFormat:@"page_loading%u",i];
-        UIImage * image = [UIImage imageNamed:imageName];
-        [images addObject:image];
+-(void)setTimeInterval:(NSTimeInterval)timeInterval{
+    self.loadingAnmationView.timeInterval = timeInterval;
+}
+-(void)setConfig:(WFLoadingConfig *)config{
+    _config = config;
+    [self.loadingAnmationView setConfig:config];
+    if (config.failShow) {
+        self.emptyView.config = config;
     }
-    return images;
-}
--(void)layoutSubviews{
-    [super layoutSubviews];
-    self.animationView.center = self.center;
-    
 }
 /*
  // Only override drawRect: if you perform custom drawing.

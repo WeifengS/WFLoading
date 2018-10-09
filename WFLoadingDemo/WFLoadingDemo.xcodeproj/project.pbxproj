@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1805E37A216C443300BFCB32 /* WFLoadingEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1805E379216C443300BFCB32 /* WFLoadingEmptyView.m */; };
+		1805E37D216C52E200BFCB32 /* WFLoadingDefaultConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1805E37C216C52E200BFCB32 /* WFLoadingDefaultConfig.m */; };
 		18C16B7C216AF4F3006094CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C16B7B216AF4F3006094CC /* AppDelegate.m */; };
 		18C16B7F216AF4F3006094CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C16B7E216AF4F3006094CC /* ViewController.m */; };
 		18C16B82216AF4F3006094CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C16B80216AF4F3006094CC /* Main.storyboard */; };
@@ -17,6 +19,9 @@
 		18C16B9F216AF4F3006094CC /* WFLoadingDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C16B9E216AF4F3006094CC /* WFLoadingDemoUITests.m */; };
 		18C16BAF216AF51A006094CC /* UIView+WFLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C16BAE216AF51A006094CC /* UIView+WFLoading.m */; };
 		18C16BBC216B3B2D006094CC /* WFLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C16BBB216B3B2D006094CC /* WFLoadingView.m */; };
+		18F0AB17216B4AB100D80BA8 /* WFLoadingConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0AB16216B4AB100D80BA8 /* WFLoadingConfig.m */; };
+		18F0AB1A216B4D0800D80BA8 /* WFLoadingAnmationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0AB19216B4D0800D80BA8 /* WFLoadingAnmationView.m */; };
+		18F0AB1D216B4D2000D80BA8 /* WFLoadingConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0AB1C216B4D2000D80BA8 /* WFLoadingConfigView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1805E378216C443300BFCB32 /* WFLoadingEmptyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFLoadingEmptyView.h; sourceTree = "<group>"; };
+		1805E379216C443300BFCB32 /* WFLoadingEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFLoadingEmptyView.m; sourceTree = "<group>"; };
+		1805E37B216C52E200BFCB32 /* WFLoadingDefaultConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFLoadingDefaultConfig.h; sourceTree = "<group>"; };
+		1805E37C216C52E200BFCB32 /* WFLoadingDefaultConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFLoadingDefaultConfig.m; sourceTree = "<group>"; };
 		18C16B77216AF4F2006094CC /* WFLoadingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WFLoadingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C16B7A216AF4F2006094CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18C16B7B216AF4F3006094CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,6 +66,12 @@
 		18C16BAE216AF51A006094CC /* UIView+WFLoading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WFLoading.m"; sourceTree = "<group>"; };
 		18C16BBA216B3B2D006094CC /* WFLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFLoadingView.h; sourceTree = "<group>"; };
 		18C16BBB216B3B2D006094CC /* WFLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFLoadingView.m; sourceTree = "<group>"; };
+		18F0AB15216B4AB100D80BA8 /* WFLoadingConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFLoadingConfig.h; sourceTree = "<group>"; };
+		18F0AB16216B4AB100D80BA8 /* WFLoadingConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFLoadingConfig.m; sourceTree = "<group>"; };
+		18F0AB18216B4D0800D80BA8 /* WFLoadingAnmationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFLoadingAnmationView.h; sourceTree = "<group>"; };
+		18F0AB19216B4D0800D80BA8 /* WFLoadingAnmationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFLoadingAnmationView.m; sourceTree = "<group>"; };
+		18F0AB1B216B4D2000D80BA8 /* WFLoadingConfigView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFLoadingConfigView.h; sourceTree = "<group>"; };
+		18F0AB1C216B4D2000D80BA8 /* WFLoadingConfigView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFLoadingConfigView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +161,16 @@
 				18C16BAE216AF51A006094CC /* UIView+WFLoading.m */,
 				18C16BBA216B3B2D006094CC /* WFLoadingView.h */,
 				18C16BBB216B3B2D006094CC /* WFLoadingView.m */,
+				18F0AB18216B4D0800D80BA8 /* WFLoadingAnmationView.h */,
+				18F0AB19216B4D0800D80BA8 /* WFLoadingAnmationView.m */,
+				18F0AB1B216B4D2000D80BA8 /* WFLoadingConfigView.h */,
+				18F0AB1C216B4D2000D80BA8 /* WFLoadingConfigView.m */,
+				18F0AB15216B4AB100D80BA8 /* WFLoadingConfig.h */,
+				18F0AB16216B4AB100D80BA8 /* WFLoadingConfig.m */,
+				1805E378216C443300BFCB32 /* WFLoadingEmptyView.h */,
+				1805E379216C443300BFCB32 /* WFLoadingEmptyView.m */,
+				1805E37B216C52E200BFCB32 /* WFLoadingDefaultConfig.h */,
+				1805E37C216C52E200BFCB32 /* WFLoadingDefaultConfig.m */,
 			);
 			path = WFLoading;
 			sourceTree = "<group>";
@@ -284,7 +309,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C16BAF216AF51A006094CC /* UIView+WFLoading.m in Sources */,
+				1805E37D216C52E200BFCB32 /* WFLoadingDefaultConfig.m in Sources */,
+				18F0AB1A216B4D0800D80BA8 /* WFLoadingAnmationView.m in Sources */,
+				1805E37A216C443300BFCB32 /* WFLoadingEmptyView.m in Sources */,
+				18F0AB17216B4AB100D80BA8 /* WFLoadingConfig.m in Sources */,
 				18C16BBC216B3B2D006094CC /* WFLoadingView.m in Sources */,
+				18F0AB1D216B4D2000D80BA8 /* WFLoadingConfigView.m in Sources */,
 				18C16B7F216AF4F3006094CC /* ViewController.m in Sources */,
 				18C16B8A216AF4F3006094CC /* main.m in Sources */,
 				18C16B7C216AF4F3006094CC /* AppDelegate.m in Sources */,
