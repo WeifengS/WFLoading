@@ -1,13 +1,13 @@
 //
-//  WFLoadingConfigView.h
+//  FirstViewController.h
 //  WFLoadingDemo
 //
-//  Created by Apple on 2018/10/8.
+//  Created by Apple on 2018/10/9.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface WFLoadingConfigView : UIView
+@interface FirstViewController : UIViewController
 
 @end

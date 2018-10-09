@@ -75,7 +75,7 @@
     self.bottomBtn.layer.cornerRadius =bottomBtnSize.height/2;
 
 }
--(void)setConfig:(WFLoadingConfig *)config{
+-(void)setConfig:(id<WFLoadingConfigDelgate>)config{
     _config = config;
     [self setImage:[UIImage imageNamed:config.emptyImage] topLabelText:config.emptyMsg bottomBtn:config.emptyBtnTitle];
     self.topLabel.textColor = config.emptyMsgTextColor;
@@ -87,9 +87,13 @@
     
 }
 -(void)action{
-    if (self.config.action) {
-         self.config.action();
+    if ([self.config isKindOfClass:[WFLoadingConfig class]]) {
+        WFLoadingConfig * config = self.config;
+        if (config.action) {
+            config.action();
+        }
     }
+    
    
 }
 /*

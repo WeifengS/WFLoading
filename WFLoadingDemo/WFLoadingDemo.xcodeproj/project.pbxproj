@@ -31,6 +31,7 @@
 		1805E3A9216C921000BFCB32 /* loading1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1805E395216C920F00BFCB32 /* loading1@3x.png */; };
 		1805E3AA216C921000BFCB32 /* loading3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1805E396216C920F00BFCB32 /* loading3@3x.png */; };
 		1805E3AB216C921000BFCB32 /* loading12@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1805E397216C920F00BFCB32 /* loading12@3x.png */; };
+		1805E3BE216CA5A700BFCB32 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1805E3BD216CA5A700BFCB32 /* FirstViewController.m */; };
 		18C16B7C216AF4F3006094CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C16B7B216AF4F3006094CC /* AppDelegate.m */; };
 		18C16B7F216AF4F3006094CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C16B7E216AF4F3006094CC /* ViewController.m */; };
 		18C16B82216AF4F3006094CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C16B80216AF4F3006094CC /* Main.storyboard */; };
@@ -43,7 +44,6 @@
 		18C16BBC216B3B2D006094CC /* WFLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C16BBB216B3B2D006094CC /* WFLoadingView.m */; };
 		18F0AB17216B4AB100D80BA8 /* WFLoadingConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0AB16216B4AB100D80BA8 /* WFLoadingConfig.m */; };
 		18F0AB1A216B4D0800D80BA8 /* WFLoadingAnmationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0AB19216B4D0800D80BA8 /* WFLoadingAnmationView.m */; };
-		18F0AB1D216B4D2000D80BA8 /* WFLoadingConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0AB1C216B4D2000D80BA8 /* WFLoadingConfigView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +91,8 @@
 		1805E395216C920F00BFCB32 /* loading1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading1@3x.png"; sourceTree = "<group>"; };
 		1805E396216C920F00BFCB32 /* loading3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading3@3x.png"; sourceTree = "<group>"; };
 		1805E397216C920F00BFCB32 /* loading12@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading12@3x.png"; sourceTree = "<group>"; };
+		1805E3BC216CA5A700BFCB32 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		1805E3BD216CA5A700BFCB32 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		18C16B77216AF4F2006094CC /* WFLoadingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WFLoadingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C16B7A216AF4F2006094CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18C16B7B216AF4F3006094CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,8 +117,6 @@
 		18F0AB16216B4AB100D80BA8 /* WFLoadingConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFLoadingConfig.m; sourceTree = "<group>"; };
 		18F0AB18216B4D0800D80BA8 /* WFLoadingAnmationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFLoadingAnmationView.h; sourceTree = "<group>"; };
 		18F0AB19216B4D0800D80BA8 /* WFLoadingAnmationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFLoadingAnmationView.m; sourceTree = "<group>"; };
-		18F0AB1B216B4D2000D80BA8 /* WFLoadingConfigView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFLoadingConfigView.h; sourceTree = "<group>"; };
-		18F0AB1C216B4D2000D80BA8 /* WFLoadingConfigView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFLoadingConfigView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +206,8 @@
 				18C16B85216AF4F3006094CC /* LaunchScreen.storyboard */,
 				18C16B88216AF4F3006094CC /* Info.plist */,
 				18C16B89216AF4F3006094CC /* main.m */,
+				1805E3BC216CA5A700BFCB32 /* FirstViewController.h */,
+				1805E3BD216CA5A700BFCB32 /* FirstViewController.m */,
 			);
 			path = WFLoadingDemo;
 			sourceTree = "<group>";
@@ -238,8 +240,6 @@
 				18C16BBB216B3B2D006094CC /* WFLoadingView.m */,
 				18F0AB18216B4D0800D80BA8 /* WFLoadingAnmationView.h */,
 				18F0AB19216B4D0800D80BA8 /* WFLoadingAnmationView.m */,
-				18F0AB1B216B4D2000D80BA8 /* WFLoadingConfigView.h */,
-				18F0AB1C216B4D2000D80BA8 /* WFLoadingConfigView.m */,
 				18F0AB15216B4AB100D80BA8 /* WFLoadingConfig.h */,
 				18F0AB16216B4AB100D80BA8 /* WFLoadingConfig.m */,
 				1805E378216C443300BFCB32 /* WFLoadingEmptyView.h */,
@@ -406,13 +406,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1805E3BE216CA5A700BFCB32 /* FirstViewController.m in Sources */,
 				18C16BAF216AF51A006094CC /* UIView+WFLoading.m in Sources */,
 				1805E37D216C52E200BFCB32 /* WFLoadingDefaultConfig.m in Sources */,
 				18F0AB1A216B4D0800D80BA8 /* WFLoadingAnmationView.m in Sources */,
 				1805E37A216C443300BFCB32 /* WFLoadingEmptyView.m in Sources */,
 				18F0AB17216B4AB100D80BA8 /* WFLoadingConfig.m in Sources */,
 				18C16BBC216B3B2D006094CC /* WFLoadingView.m in Sources */,
-				18F0AB1D216B4D2000D80BA8 /* WFLoadingConfigView.m in Sources */,
 				18C16B7F216AF4F3006094CC /* ViewController.m in Sources */,
 				18C16B8A216AF4F3006094CC /* main.m in Sources */,
 				18C16B7C216AF4F3006094CC /* AppDelegate.m in Sources */,

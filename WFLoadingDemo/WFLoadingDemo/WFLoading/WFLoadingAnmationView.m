@@ -71,7 +71,7 @@
     return images;
 }
 
--(void)setConfig:(WFLoadingConfig *)config{
+-(void)setConfig:(id <WFLoadingConfigDelgate>)config{
     if (config.images.count!=0) {
         self.loadingImageArr = config.images;
     }

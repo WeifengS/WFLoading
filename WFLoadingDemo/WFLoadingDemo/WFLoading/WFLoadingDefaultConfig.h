@@ -44,6 +44,6 @@
 @property (nonatomic,strong) UIColor  * emptyBtnblackGroundColor;
 /**按钮文字大小  默认14*/
 @property (nonatomic,strong) UIFont   * emptyBtnFont;
-
-@property (nonatomic,  copy) BtnAction action;
+/**点击事件不能全局配置，请使用单独WFLoadingConfig配置*/
+//@property (nonatomic,  copy) BtnAction action;
 @end

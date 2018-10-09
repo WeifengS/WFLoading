@@ -43,10 +43,9 @@
 @property (nonatomic,strong) UIColor * emptyBtnblackGroundColor;
 /**按钮文字大小  默认14 建议14-16*/
 @property (nonatomic,strong) UIFont * emptyBtnFont;
-/**按钮响应代理 */
-//@property (nonatomic,  weak) id btnDelegate;
 /**按钮响应方法*/
 @property (nonatomic,  copy) BtnAction action;
+
 +(WFLoadingConfig*)loadingWithBtnAction:(BtnAction)action;
 -(instancetype)initWithAction:(BtnAction)action;
 +(WFLoadingConfig*)loadingWithBtnTitle:(NSString*)title emptyImage:(NSString*)emptyImage Action:(BtnAction)action;

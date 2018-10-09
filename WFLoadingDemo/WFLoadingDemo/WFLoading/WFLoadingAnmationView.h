@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WFLoadingConfig.h"
+#import "WFLoadingConfigDelgate.h"
 
 @interface WFLoadingAnmationView : UIView
 @property (nonatomic,strong) UIImageView * animationView;
@@ -16,7 +16,7 @@
 @property (nonatomic,assign) NSTimeInterval timeInterval;
 @property (nonatomic,assign) NSTimeInterval msgTimeInterval;
 -(void)wfSetImages:(NSArray<NSString*> *)images;
-@property (nonatomic,strong) WFLoadingConfig * config;
+@property (nonatomic,strong) id <WFLoadingConfigDelgate> config;
 -(void)actionAcmation;
 -(void)stopAnimation;
 @end

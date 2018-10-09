@@ -41,9 +41,8 @@ typedef void (^BtnAction)(void);
 /**按钮文字大小  默认14*/
 @property (nonatomic,strong) UIFont * emptyBtnFont;
 
-@optional
-///**按钮响应代理 */
-//@property (nonatomic,  weak) id target;
-/**按钮响应方法*/
-@property (nonatomic,  copy) BtnAction action;
+//@optional
+//
+///**按钮响应方法,切记要weakSelf*/
+//@property (nonatomic,  copy) BtnAction action;
 @end

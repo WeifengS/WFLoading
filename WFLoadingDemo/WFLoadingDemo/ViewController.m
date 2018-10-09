@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UIView+WFLoading.h"
+#import "FirstViewController.h"
 
 @interface ViewController ()
 
@@ -17,29 +18,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.backgroundColor = [UIColor redColor];
-//    [self.view showLoading];
-//
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [self.view stopAnimating];
-//    });
-    // Do any additional setup after loading the view, typically from a nib.
+
 }
--(void)sel{
-    [self show];
-}
--(void)show{
-    [self.view showLoading];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.view stopAnimating];
-    });
-}
+
 
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)presentVC:(UIButton *)sender {
+    FirstViewController * vc = [[FirstViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)setMyLoading:(UIButton *)sender {
     WFLoadingConfig * config = [[WFLoadingConfig alloc]init];
@@ -58,10 +49,8 @@
     config.loadingMsgTextFont = [UIFont systemFontOfSize:11];
     config.loadingMsgTextColor = [UIColor redColor];
     config.emptyBtnTitle = @"消失";
-    __weak typeof(self) weakSelf = self;
-    config.action = ^{
-        [weakSelf.view hideLoading];
-    };
+
+    
     
 }
 - (IBAction)action2:(UIButton *)sender {
@@ -70,10 +59,8 @@
     config.loadingMsgTextFont = [UIFont systemFontOfSize:14];
     config.loadingMsgTextColor = [UIColor blueColor];
     config.emptyBtnTitle = @"再见";
-    __weak typeof(self) weakSelf = self;
-    config.action = ^{
-         [weakSelf.view hideLoading];
-    };
+
+    
     
 }
 - (IBAction)action3:(UIButton *)sender {
@@ -82,14 +69,8 @@
     config.loadingMsgTextFont = [UIFont systemFontOfSize:16];
     config.loadingMsgTextColor = [UIColor yellowColor];
     config.emptyBtnTitle = @"哟呵，再转一次";
-    __weak typeof(self) weakSelf = self;
-    config.action = ^{
-        NSLog(@"mdzz");
-        [weakSelf.view showLoading];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [weakSelf.view hideLoading];
-        });
-    };
+
+    
     
 }
 - (IBAction)loadingViewShow:(UIButton *)sender {
@@ -99,7 +80,10 @@
     });
 }
 - (IBAction)loadingEmptyShow:(UIButton *)sender {
-    [self.view showLoading];
+    __weak typeof(self) weakSelf = self;
+    [self.view showLoadingWithConfig:[WFLoadingConfig loadingWithBtnAction:^{
+        [weakSelf.view hideLoading];
+    }]];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.view stopAnimating];
     });
