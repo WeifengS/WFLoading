@@ -11,7 +11,8 @@
 #import "WFLoadingAnmationView.h"
 @interface WFLoadingView : UIView
 
-@property (nonatomic,strong) WFLoadingConfig * config;
+@property (nonatomic,strong) id <WFLoadingConfigDelgate> config;
+-(void)setUpConfig:(id<WFLoadingConfigDelgate>)config;
 
 @property (nonatomic,strong) NSArray * loadingImageArr;
 @property (nonatomic,assign) NSTimeInterval timeInterval;

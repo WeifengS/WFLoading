@@ -17,4 +17,6 @@
 @property (nonatomic,assign) NSTimeInterval msgTimeInterval;
 -(void)wfSetImages:(NSArray<NSString*> *)images;
 @property (nonatomic,strong) WFLoadingConfig * config;
+-(void)actionAcmation;
+-(void)stopAnimation;
 @end

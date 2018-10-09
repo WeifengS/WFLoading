@@ -70,21 +70,27 @@
     self.imageView.frame = CGRectMake((self.frame.size.width-imageSize.width)/2, (self.frame.size.height - imageSize.height)/2 - 50, imageSize.width, imageSize.height);
     CGSize topLabelSize =  [self.topLabel sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)];
     self.topLabel.frame = CGRectMake((self.frame.size.width - topLabelSize.width)/2, CGRectGetMaxY(self.imageView.frame)+5, topLabelSize.width, topLabelSize.height);
-    CGSize bottomBtnSize = [self.bottomBtn sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)];
-    self.bottomBtn.frame = CGRectMake((self.frame.size.width - bottomBtnSize.width)/2, CGRectGetMaxY(self.topLabel.frame)+5, bottomBtnSize.width, bottomBtnSize.height);
+    CGSize bottomBtnSize =CGSizeMake(150, 36);
+    self.bottomBtn.frame = CGRectMake((self.frame.size.width - bottomBtnSize.width)/2, CGRectGetMaxY(self.topLabel.frame)+10, bottomBtnSize.width, bottomBtnSize.height);
     self.bottomBtn.layer.cornerRadius =bottomBtnSize.height/2;
 
 }
 -(void)setConfig:(WFLoadingConfig *)config{
-
-    [self setImage:[UIImage imageNamed:config.failImage] topLabelText:config.failMsg bottomBtn:config.failBtnTitle];
-    self.topLabel.textColor = config.failMsgTextColor;
-    self.topLabel.font = config.failMsgTextFont;
-    [self.bottomBtn setBackgroundColor:config.failBtnblackGroundColor];
-    self.bottomBtn.titleLabel.font = config.failBtnFont;
-    [self.bottomBtn setTitleColor:config.failBtnTitleColor forState:UIControlStateNormal];
-    [self.bottomBtn addTarget:config.btnDelegate action:config.sel forControlEvents:UIControlEventTouchUpInside];
+    _config = config;
+    [self setImage:[UIImage imageNamed:config.emptyImage] topLabelText:config.emptyMsg bottomBtn:config.emptyBtnTitle];
+    self.topLabel.textColor = config.emptyMsgTextColor;
+    self.topLabel.font = config.emptyMsgTextFont;
+    [self.bottomBtn setBackgroundColor:config.emptyBtnblackGroundColor];
+    self.bottomBtn.titleLabel.font = config.emptyBtnFont;
+    [self.bottomBtn setTitleColor:config.emptyBtnTitleColor forState:UIControlStateNormal];
+    [self.bottomBtn addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
     
+}
+-(void)action{
+    if (self.config.action) {
+         self.config.action();
+    }
+   
 }
 /*
 // Only override drawRect: if you perform custom drawing.

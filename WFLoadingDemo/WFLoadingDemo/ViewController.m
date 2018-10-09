@@ -17,24 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    WFLoadingConfig * config = [[WFLoadingConfig alloc]init];
-    config.loadingMsgTextFont = [UIFont systemFontOfSize:14];
-    config.loadingMsgTextColor = [UIColor grayColor];
-    config.loadingMsg = @"加载中";
-    config.loadingMsgAnimtion = YES;
-    config.failShow = YES;
-    config.failImage = [UIImage imageNamed:@"page_loading15"];
-    config.failMsg = @"网络错误";
-    config.failMsgTextFont = [UIFont systemFontOfSize:14];
-    config.showFailBtn = YES;
-    config.failBtnTitle = @"点击重试";
-    config.btnDelegate = self;
-    config.sel = @selector(sel);
-    self.view.loadingView.config = config;
-    [self.view showLoading];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.view stopAnimating];
-    });
+//    self.view.backgroundColor = [UIColor redColor];
+//    [self.view showLoading];
+//
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self.view stopAnimating];
+//    });
     // Do any additional setup after loading the view, typically from a nib.
 }
 -(void)sel{
@@ -52,6 +40,69 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)setMyLoading:(UIButton *)sender {
+    WFLoadingConfig * config = [[WFLoadingConfig alloc]init];
+    config.loadingMsg = @"我与众不同";
+    config.loadingMsgTextColor = [UIColor purpleColor];
+    config.imageTimeInterval = 3;
+    [self.view showLoadingWithConfig:config];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.view hideLoading];
+    });
+    
+}
+- (IBAction)action1:(UIButton *)sender {
+    WFLoadingDefaultConfig * config = [WFLoadingDefaultConfig shareDefaultConfig];
+    config.loadingMsg = @"菊花转啊转";
+    config.loadingMsgTextFont = [UIFont systemFontOfSize:11];
+    config.loadingMsgTextColor = [UIColor redColor];
+    config.emptyBtnTitle = @"消失";
+    __weak typeof(self) weakSelf = self;
+    config.action = ^{
+        [weakSelf.view hideLoading];
+    };
+    
+}
+- (IBAction)action2:(UIButton *)sender {
+    WFLoadingDefaultConfig * config = [WFLoadingDefaultConfig shareDefaultConfig];
+    config.loadingMsg = @"无聊中zzzzzz";
+    config.loadingMsgTextFont = [UIFont systemFontOfSize:14];
+    config.loadingMsgTextColor = [UIColor blueColor];
+    config.emptyBtnTitle = @"再见";
+    __weak typeof(self) weakSelf = self;
+    config.action = ^{
+         [weakSelf.view hideLoading];
+    };
+    
+}
+- (IBAction)action3:(UIButton *)sender {
+    WFLoadingDefaultConfig * config = [WFLoadingDefaultConfig shareDefaultConfig];
+    config.loadingMsg = @"网络君正在请求，请稍后...";
+    config.loadingMsgTextFont = [UIFont systemFontOfSize:16];
+    config.loadingMsgTextColor = [UIColor yellowColor];
+    config.emptyBtnTitle = @"哟呵，再转一次";
+    __weak typeof(self) weakSelf = self;
+    config.action = ^{
+        NSLog(@"mdzz");
+        [weakSelf.view showLoading];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.view hideLoading];
+        });
+    };
+    
+}
+- (IBAction)loadingViewShow:(UIButton *)sender {
+    [self.view showLoading];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.view hideLoading];
+    });
+}
+- (IBAction)loadingEmptyShow:(UIButton *)sender {
+    [self.view showLoading];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.view stopAnimating];
+    });
 }
 
 

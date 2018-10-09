@@ -13,23 +13,21 @@ static WFLoadingDefaultConfig *_shareInstance;
 #pragma mark - 设置默认值
 -(void)setUpconfig{
     self.images = @[];
-    self.loadingMsgAnimtion = NO;
+
     self.loadingMsg = @"加载中...";
     self.loadingMsgTextColor = [UIColor grayColor];
     self.loadingMsgTextFont  = [UIFont systemFontOfSize:14];
-    self.imageTimeInterval = 3;
-    self.msgTimeInterval = 0;
-    
-    self.failShow = NO;
-    self.failImage = @"";
-    self.failMsg = @"";
-    self.failMsgTextColor = [UIColor grayColor];
-    self.failMsgTextFont  = [UIFont systemFontOfSize:14];
-    self.showFailBtn = NO;
-    self.failBtnTitle = @"";
-    self.failBtnTitleColor = [UIColor whiteColor];
-    self.failBtnblackGroundColor = [UIColor blueColor];
-    self.failBtnFont = [UIFont systemFontOfSize:14];
+    self.imageTimeInterval = 2;
+
+    self.emptyImage = @"load_failed_n";
+    self.emptyMsg = @"网络连接失败，请检查您的网络";
+    self.emptyMsgTextColor = [UIColor grayColor];
+    self.emptyMsgTextFont  = [UIFont systemFontOfSize:14];
+
+    self.emptyBtnTitle = @"再试一次";
+    self.emptyBtnTitleColor = [UIColor whiteColor];
+    self.emptyBtnblackGroundColor = [UIColor blueColor];
+    self.emptyBtnFont = [UIFont systemFontOfSize:14];
 }
 #pragma mark - 单例
 - (instancetype)init {
@@ -40,6 +38,7 @@ static WFLoadingDefaultConfig *_shareInstance;
 + (instancetype)shareDefaultConfig {
     if (!_shareInstance) {
         _shareInstance = [[WFLoadingDefaultConfig alloc] init];
+        [_shareInstance setUpconfig];
         
     }    return _shareInstance;
     

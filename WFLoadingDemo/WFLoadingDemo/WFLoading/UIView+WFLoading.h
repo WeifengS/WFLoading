@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WFLoadingView.h"
+#import "WFLoadingDefaultConfig.h"
 #import "WFLoadingConfig.h"
 @interface UIView (WFLoading)
 
-@property (nonatomic,strong,readonly)WFLoadingView * loadingView;
 /**动画图片*/
 -(void)setWFLoadingImages:(NSArray <NSString*>*)images;
 /**动画时间*/

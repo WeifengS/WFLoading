@@ -1,16 +1,15 @@
 //
-//  WFLoadingDefaultConfig.h
+//  WFLoadingConfigDelgate.h
 //  WFLoadingDemo
 //
 //  Created by Apple on 2018/10/9.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "WFLoadingConfigDelgate.h"
-@interface WFLoadingDefaultConfig : NSObject<WFLoadingConfigDelgate>
-+ (instancetype)shareDefaultConfig;
+#import <Foundation/Foundation.h>
 
+@protocol WFLoadingConfigDelgate <NSObject>
+typedef void (^BtnAction)(void);
 /**loading加载文字*/
 @property (nonatomic,  copy) NSString * loadingMsg;
 /**loading加载文字颜色*/
@@ -22,12 +21,9 @@
 /**动画时长 默认三秒*/
 @property (nonatomic,assign) NSTimeInterval imageTimeInterval;
 
-
-
 /**提示页配置，如需显示提示页，请在loading结束后调用stop方法*/
-
 /**提示页图片*/
-@property (nonatomic  ,copy) NSString * emptyImage;
+@property (nonatomic,  copy) NSString * emptyImage;
 /**请求失败提示页提示文本 默认为空*/
 @property (nonatomic,  copy) NSString * emptyMsg;
 /**请求失败提示页文本颜色  默认灰色*/
@@ -39,11 +35,15 @@
 /**按钮文字*/
 @property (nonatomic,  copy) NSString * emptyBtnTitle;
 /**按钮文字颜色  默认白色*/
-@property (nonatomic,strong) UIColor  * emptyBtnTitleColor;
+@property (nonatomic,strong) UIColor * emptyBtnTitleColor;
 /**按钮背景色    默认蓝色*/
-@property (nonatomic,strong) UIColor  * emptyBtnblackGroundColor;
+@property (nonatomic,strong) UIColor * emptyBtnblackGroundColor;
 /**按钮文字大小  默认14*/
-@property (nonatomic,strong) UIFont   * emptyBtnFont;
+@property (nonatomic,strong) UIFont * emptyBtnFont;
 
+@optional
+///**按钮响应代理 */
+//@property (nonatomic,  weak) id target;
+/**按钮响应方法*/
 @property (nonatomic,  copy) BtnAction action;
 @end

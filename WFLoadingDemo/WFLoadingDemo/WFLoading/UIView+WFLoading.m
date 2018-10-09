@@ -7,10 +7,13 @@
 //
 
 #import "UIView+WFLoading.h"
+#import "WFLoadingView.h"
 #import <objc/runtime.h>
+@interface UIView ()
 
-//#import <objc/runtime.h>
+@property (nonatomic,strong,readonly)WFLoadingView * loadingView;
 
+@end
 @implementation UIView (WFLoading)
 
 -(void)setLoadingView:(WFLoadingView *)loadingView{
@@ -22,6 +25,7 @@
     if (!loadingView) {
         loadingView =[[WFLoadingView alloc]initWithFrame:self.bounds];
         self.loadingView = loadingView;
+        self.loadingView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
         
     }
     return loadingView;
@@ -49,6 +53,7 @@
 
 -(void)showLoadingWithConfig:(WFLoadingConfig *)configModel{
     self.loadingView.config = configModel;
+    [self showLoading];
 }
 
 

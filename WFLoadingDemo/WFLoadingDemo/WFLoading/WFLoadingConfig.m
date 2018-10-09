@@ -7,51 +7,134 @@
 //
 
 #import "WFLoadingConfig.h"
-
+#import "WFLoadingDefaultConfig.h"
 @implementation WFLoadingConfig
 
-
--(UIColor *)failMsgTextColor{
-    if (!_failMsgTextColor) {
-        return [UIColor grayColor];
+-(NSString *)loadingMsg{
+    if (!_loadingMsg) {
+        return [WFLoadingDefaultConfig shareDefaultConfig].loadingMsg;
     }else{
-        return _failMsgTextColor;
+        return _loadingMsg;
     }
 }
 
--(UIFont *)failMsgTextFont{
-    if (!_failMsgTextFont) {
-        return [UIFont systemFontOfSize:14.f];
+-(UIColor *)loadingMsgTextColor{
+    if (!_loadingMsgTextColor) {
+        return [WFLoadingDefaultConfig shareDefaultConfig].loadingMsgTextColor;
     }else{
-        return _failMsgTextFont;
+        return _loadingMsgTextColor;
     }
+}
+
+-(UIFont *)loadingMsgTextFont{
+    if (!_loadingMsgTextFont) {
+        return [WFLoadingDefaultConfig shareDefaultConfig].loadingMsgTextFont;
+    }else{
+        return _loadingMsgTextFont;
+    }
+}
+
+-(NSArray<NSString *> *)images{
+    if (!_images) {
+        return [WFLoadingDefaultConfig shareDefaultConfig].images;
+    }else{
+        return _images;
+    }
+}
+-(NSTimeInterval)imageTimeInterval{
+    if (!_imageTimeInterval) {
+        return [WFLoadingDefaultConfig shareDefaultConfig].imageTimeInterval;
+    }else{
+        return _imageTimeInterval;
+    }
+}
+
+
+-(NSString *)emptyImage{
+    if (!_emptyImage) {
+        return [WFLoadingDefaultConfig shareDefaultConfig].emptyImage;
+    }else{
+        return _emptyImage;
+    }
+}
+
+-(NSString *)emptyMsg{
+    if (!_emptyMsg) {
+        return [WFLoadingDefaultConfig shareDefaultConfig].emptyMsg;
+    }else{
+        return _emptyMsg;
+    }
+}
+
+-(UIColor *)emptyMsgTextColor{
+    if (!_emptyMsgTextColor) {
+        return [WFLoadingDefaultConfig shareDefaultConfig].emptyMsgTextColor;
+    }else{
+        return _emptyMsgTextColor;
+    }
+}
+
+-(UIFont *)emptyMsgTextFont{
+    if (!_emptyMsgTextFont) {
+        return [WFLoadingDefaultConfig shareDefaultConfig].emptyMsgTextFont;
+        
+    }else{
+        return _emptyMsgTextFont;
+    }
+}
+
+
+
+-(NSString *)emptyBtnTitle{
+    if (!_emptyBtnTitle) {
+        return [WFLoadingDefaultConfig shareDefaultConfig].emptyBtnTitle;
+    }else{
+        return _emptyBtnTitle;
+    }
+}
+
+-(UIColor *)emptyBtnTitleColor{
+    if (!_emptyBtnTitleColor) {
+        return [WFLoadingDefaultConfig shareDefaultConfig].emptyBtnTitleColor;
+    }else{
+        return _emptyBtnTitleColor;
+    }
+}
+
+-(UIColor *)emptyBtnblackGroundColor{
+    if (!_emptyBtnblackGroundColor) {
+        return [WFLoadingDefaultConfig shareDefaultConfig].emptyBtnblackGroundColor;
+    }else{
+        return _emptyBtnblackGroundColor;
+    }
+}
+
+-(UIFont *)emptyBtnFont{
+    if (!_emptyBtnFont) {
+        return [WFLoadingDefaultConfig shareDefaultConfig].emptyBtnFont;
+    }else{
+        return _emptyBtnFont;
+    }
+}
+
+
++(WFLoadingConfig*)loadingWithBtnAction:(BtnAction)action{
+    return [[WFLoadingConfig alloc]initWithAction:action];
+}
+-(instancetype)initWithAction:(BtnAction)action{
+    WFLoadingConfig * config = [[WFLoadingConfig alloc]init];
+    config.action = action;
+    return config;
+}
++(WFLoadingConfig*)loadingWithBtnTitle:(NSString*)title emptyImage:(NSString*)emptyImage Action:(BtnAction)action{
     
+    return [[WFLoadingConfig alloc]initWithBtnTitle:title emptyImage:emptyImage Action:action];
 }
-
--(UIColor *)failBtnTitleColor{
-    if (!_failBtnTitleColor) {
-        return [UIColor whiteColor];
-    }else{
-        return _failBtnTitleColor;
-    }
-}
-
--(UIColor *)failBtnblackGroundColor{
-    if (!_failBtnblackGroundColor) {
-        return [UIColor blueColor];
-    }else{
-        return _failBtnblackGroundColor;
-    }
-    
-}
-/**按钮文字大小  默认16*/
-
--(UIFont *)failBtnFont{
-    if (!_failBtnFont) {
-        return [UIFont systemFontOfSize:14];
-    }else{
-        return _failBtnFont;
-    }
+-(instancetype)initWithBtnTitle:(NSString*)title emptyImage:(NSString*)emptyImage Action:(BtnAction)action{
+    WFLoadingConfig * config = [WFLoadingConfig loadingWithBtnAction:action];
+    config.emptyBtnTitle = title;
+    config.emptyImage = emptyImage;
+    return config;
 }
 
 

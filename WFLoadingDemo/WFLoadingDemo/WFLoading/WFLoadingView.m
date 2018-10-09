@@ -8,6 +8,7 @@
 
 #import "WFLoadingView.h"
 #import "WFLoadingEmptyView.h"
+#import "WFLoadingDefaultConfig.h"
 @interface WFLoadingView()
 @property (nonatomic,strong) WFLoadingAnmationView  * loadingAnmationView;
 @property (nonatomic,strong) WFLoadingEmptyView     * emptyView ;
@@ -29,15 +30,19 @@
 }
 
 -(void)startAnimating{
+    if (!self.config) {
+        [self setUpConfig:[WFLoadingDefaultConfig shareDefaultConfig]];
+    }else{
+        [self setUpConfig:self.config];
+    }
     [self.emptyView removeFromSuperview];
     [self addSubview:self.loadingAnmationView];
-    [self.loadingAnmationView.animationView startAnimating];
+    [self.loadingAnmationView actionAcmation];
 }
 -(void)stopAnimating{
-    [self.loadingAnmationView.animationView stopAnimating];
+    [self.loadingAnmationView stopAnimation];
 }
 -(void)showEmptyView{
-
     [self addSubview:self.emptyView];
 }
 -(void)hideLoading{
@@ -51,13 +56,16 @@
 -(void)setTimeInterval:(NSTimeInterval)timeInterval{
     self.loadingAnmationView.timeInterval = timeInterval;
 }
--(void)setConfig:(WFLoadingConfig *)config{
-    _config = config;
+-(void)setUpConfig:(id<WFLoadingConfigDelgate>)config{
     [self.loadingAnmationView setConfig:config];
-    if (config.failShow) {
-        self.emptyView.config = config;
-    }
+    [self.emptyView setConfig: config];
 }
+//-(void)setConfig:(WFLoadingConfig *)config{
+//    _config = config;
+//    [self.loadingAnmationView setConfig:config];
+//    [self.emptyView setConfig: config];
+//
+//}
 /*
  // Only override drawRect: if you perform custom drawing.
  // An empty implementation adversely affects performance during animation.

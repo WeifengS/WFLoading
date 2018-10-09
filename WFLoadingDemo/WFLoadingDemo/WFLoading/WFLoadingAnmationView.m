@@ -7,7 +7,8 @@
 //
 
 #import "WFLoadingAnmationView.h"
-
+@interface WFLoadingAnmationView()
+@end
 @implementation WFLoadingAnmationView
 - (instancetype)init
 {
@@ -27,7 +28,6 @@
 }
 -(void)setUpUI{
     self.loadingImageArr = [self images];
-    self.timeInterval = 3;
     self.animationView = [[UIImageView alloc]initWithImage:self.loadingImageArr.firstObject];
     self.animationView.animationImages = self.loadingImageArr;
     self.animationView.contentMode = UIViewContentModeScaleAspectFill;
@@ -35,8 +35,10 @@
     [self addSubview:self.msgLabel];
     [self addSubview:self.animationView];
     CGPoint center = self.center;
-    center.y = center.y - 50;
+    center.y = center.y - 25;
     self.animationView.center = center;
+
+    
     
 }
 -(void)setLoadingImageArr:(NSArray *)loadingImageArr{
@@ -45,7 +47,7 @@
     [self.animationView sizeToFit];
     self.animationView.animationImages = _loadingImageArr;
     CGPoint center = self.center;
-    center.y = center.y - 50;
+    center.y = center.y - 25;
     self.animationView.center = center;
 }
 -(void)wfSetImages:(NSArray<NSString *> *)images{
@@ -61,8 +63,8 @@
 
 -(NSArray <UIImage*>*)images{
     NSMutableArray * images = [NSMutableArray array];
-    for (int i = 1; i < 33; i++) {
-        NSString * imageName = [NSString stringWithFormat:@"page_loading%u",i];
+    for (int i = 1; i < 20; i++) {
+        NSString * imageName = [NSString stringWithFormat:@"loading%u",i];
         UIImage * image = [UIImage imageNamed:imageName];
         [images addObject:image];
     }
@@ -73,17 +75,24 @@
     if (config.images.count!=0) {
         self.loadingImageArr = config.images;
     }
- 
-    if (config. loadingMsgAnimtion) {
-        self.msgLabel.text = config.loadingMsg;
-        self.msgLabel.textColor = config.loadingMsgTextColor;
-        self.msgLabel.font = config.loadingMsgTextFont;
-        self.msgLabel.backgroundColor = [UIColor clearColor];
-        self.msgLabel.textAlignment = NSTextAlignmentCenter;
-        CGSize size =  [self.msgLabel sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)];
-        self.msgLabel.frame = CGRectMake((self.bounds.size.width - size.width)/2, CGRectGetMaxY(self.animationView.frame)+5, size.width, size.height);
-        [self addSubview:self.msgLabel];
-    }
+    self.timeInterval = config.imageTimeInterval;
+    self.msgLabel.text = config.loadingMsg;
+    self.msgLabel.textColor = config.loadingMsgTextColor;
+    self.msgLabel.font = config.loadingMsgTextFont;
+    self.msgLabel.backgroundColor = [UIColor clearColor];
+    self.msgLabel.textAlignment = NSTextAlignmentCenter;
+    CGSize size =  [self.msgLabel sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)];
+    self.msgLabel.frame = CGRectMake((self.bounds.size.width - size.width)/2, CGRectGetMaxY(self.animationView.frame)+5, size.width, size.height);
+    NSLog(@"%@",self.msgLabel.text);
+//    [self addSubview:self.msgLabel];
+    
+}
+-(void)actionAcmation{
+    self.animationView.animationDuration = self.timeInterval;
+    [self.animationView startAnimating];
+}
+-(void)stopAnimation{
+    [self.animationView stopAnimating];
 }
 
 /*
