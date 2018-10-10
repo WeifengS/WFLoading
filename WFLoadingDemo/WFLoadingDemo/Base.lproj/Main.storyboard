@@ -34,32 +34,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r99-6Z-Tsm">
-                                <rect key="frame" x="138" y="335" width="101" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQM-ke-4vI">
+                                <rect key="frame" x="112" y="221" width="160" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="修改默认配置2"/>
+                                <state key="normal" title="单独修改某项加载动画1"/>
                                 <connections>
-                                    <action selector="action2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R6L-07-jx3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bw-ut-udR">
-                                <rect key="frame" x="138" y="373" width="101" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="修改默认配置3"/>
-                                <connections>
-                                    <action selector="action3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ium-XI-yFy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyk-Q3-Myf">
-                                <rect key="frame" x="138" y="297" width="99" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="修改默认配置1"/>
-                                <connections>
-                                    <action selector="action1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCs-sj-ZjD"/>
+                                    <action selector="showCustom1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCh-B0-SKJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cso-GB-SaM">
-                                <rect key="frame" x="141" y="197" width="92" height="30"/>
+                                <rect key="frame" x="142" y="183" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="查看加载动画"/>
                                 <connections>
@@ -67,19 +51,43 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30t-8i-Vaq">
-                                <rect key="frame" x="111" y="259" width="153" height="30"/>
+                                <rect key="frame" x="111" y="259" width="171" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="单独修改某项加载动画"/>
+                                <state key="normal" title="单独修改某项加载动画2"/>
                                 <connections>
                                     <action selector="showCustom2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Kj-8U-xsh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQM-ke-4vI">
-                                <rect key="frame" x="112" y="235" width="153" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wb9-Gi-B3p">
+                                <rect key="frame" x="149" y="289" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="单独修改某项加载动画"/>
+                                <state key="normal" title="查看提示页"/>
                                 <connections>
-                                    <action selector="showCustom1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCh-B0-SKJ"/>
+                                    <action selector="showEmptyVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LP6-eI-ZBy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r99-6Z-Tsm">
+                                <rect key="frame" x="142" y="365" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="修改默认配置2"/>
+                                <connections>
+                                    <action selector="action2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R6L-07-jx3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bw-ut-udR">
+                                <rect key="frame" x="142" y="403" width="101" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="修改默认配置3"/>
+                                <connections>
+                                    <action selector="action3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ium-XI-yFy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyk-Q3-Myf">
+                                <rect key="frame" x="142" y="327" width="99" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="修改默认配置1"/>
+                                <connections>
+                                    <action selector="action1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCs-sj-ZjD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -90,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="519" y="67"/>
+            <point key="canvasLocation" x="517.60000000000002" y="66.11694152923539"/>
         </scene>
     </scenes>
 </document>

@@ -12,7 +12,6 @@
 static WFLoadingDefaultConfig *_shareInstance;
 #pragma mark - 设置默认值
 -(void)setUpconfig{
-    self.images = @[];
 
     self.loadingMsg = @"加载中...";
     self.loadingMsgTextColor = [UIColor grayColor];

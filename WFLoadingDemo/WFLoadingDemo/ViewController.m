@@ -11,6 +11,7 @@
 #import "FirstViewController.h"
 #import "SecondViewController.h"
 #import "DefaultViewController.h"
+#import "ShowEmptyViewController.h"
 #import "UIView+Toast.h"
 
 @interface ViewController ()
@@ -32,6 +33,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)showEmptyVC:(UIButton *)sender {
+    [self.navigationController pushViewController:[ShowEmptyViewController new] animated:YES];
+}
 
 - (IBAction)showDefultLoading:(UIButton *)sender {
     [self.navigationController pushViewController:[DefaultViewController new] animated:YES];

@@ -35,6 +35,7 @@
 		1847F314216D994800133BB6 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847F313216D994800133BB6 /* SecondViewController.m */; };
 		1847F317216D995700133BB6 /* DefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847F316216D995700133BB6 /* DefaultViewController.m */; };
 		1847F31B216D9D4A00133BB6 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847F31A216D9D4A00133BB6 /* UIView+Toast.m */; };
+		1847F31E216DA77100133BB6 /* ShowEmptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847F31D216DA77100133BB6 /* ShowEmptyViewController.m */; };
 		18C16B7C216AF4F3006094CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C16B7B216AF4F3006094CC /* AppDelegate.m */; };
 		18C16B7F216AF4F3006094CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C16B7E216AF4F3006094CC /* ViewController.m */; };
 		18C16B82216AF4F3006094CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C16B80216AF4F3006094CC /* Main.storyboard */; };
@@ -102,6 +103,8 @@
 		1847F316216D995700133BB6 /* DefaultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultViewController.m; sourceTree = "<group>"; };
 		1847F319216D9D4A00133BB6 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		1847F31A216D9D4A00133BB6 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		1847F31C216DA77100133BB6 /* ShowEmptyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowEmptyViewController.h; sourceTree = "<group>"; };
+		1847F31D216DA77100133BB6 /* ShowEmptyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowEmptyViewController.m; sourceTree = "<group>"; };
 		18C16B77216AF4F2006094CC /* WFLoadingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WFLoadingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C16B7A216AF4F2006094CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18C16B7B216AF4F3006094CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -231,6 +234,8 @@
 				1847F313216D994800133BB6 /* SecondViewController.m */,
 				1847F315216D995700133BB6 /* DefaultViewController.h */,
 				1847F316216D995700133BB6 /* DefaultViewController.m */,
+				1847F31C216DA77100133BB6 /* ShowEmptyViewController.h */,
+				1847F31D216DA77100133BB6 /* ShowEmptyViewController.m */,
 			);
 			path = WFLoadingDemo;
 			sourceTree = "<group>";
@@ -442,6 +447,7 @@
 				18C16B8A216AF4F3006094CC /* main.m in Sources */,
 				1847F317216D995700133BB6 /* DefaultViewController.m in Sources */,
 				18C16B7C216AF4F3006094CC /* AppDelegate.m in Sources */,
+				1847F31E216DA77100133BB6 /* ShowEmptyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,38 +1,34 @@
 //
-//  SecondViewController.m
+//  ShowEmptyViewController.m
 //  WFLoadingDemo
 //
 //  Created by Apple on 2018/10/10.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "ShowEmptyViewController.h"
 #import "UIView+WFLoading.h"
-
-@interface SecondViewController ()
+@interface ShowEmptyViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation ShowEmptyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
     WFLoadingConfig * config = [[WFLoadingConfig alloc]init];
-    NSMutableArray * arr = [NSMutableArray array];
-    for (int i = 1; i <= 32; i++) {
-        NSString * imageName = [NSString stringWithFormat:@"page_loading%u",i];
-        [arr addObject:imageName];
-    }
-    config.images = arr;
-    config.loadingMsg = @"我是单独加载……";
-    config.emptyMsg = @"独一无二的错误。。。";
-    config.emptyBtnTitle = @"";
+
+    config.emptyMsg = @"我是提示页";
+    config.emptyBtnTitle = @"知道了";
     __weak typeof(self) weakSelf = self;
+    
     config.action = ^{
         [weakSelf.view hideLoading];
     };
-    [self.view showLoadingWithConfig:config];
+    
+    [self.view showEmptyWithConfig:config];
     // Do any additional setup after loading the view.
 }
 

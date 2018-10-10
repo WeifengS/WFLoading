@@ -12,7 +12,7 @@
 @interface WFLoadingAnmationView : UIView
 @property (nonatomic,strong) UIImageView * animationView;
 @property (nonatomic,strong) UILabel * msgLabel;
-@property (nonatomic,strong) NSArray * loadingImageArr;
+@property (nonatomic,strong) NSArray <UIImage*>* loadingImageArr;
 @property (nonatomic,assign) NSTimeInterval timeInterval;
 @property (nonatomic,assign) NSTimeInterval msgTimeInterval;
 -(void)wfSetImages:(NSArray<NSString*> *)images;

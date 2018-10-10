@@ -34,11 +34,11 @@ typedef void (^BtnAction)(void);
 
 /**按钮文字*/
 @property (nonatomic,  copy) NSString * emptyBtnTitle;
-/**按钮文字颜色*/
+/**按钮文字颜色  */
 @property (nonatomic,strong) UIColor * emptyBtnTitleColor;
-/**按钮背景色 */
+/**按钮背景色    */
 @property (nonatomic,strong) UIColor * emptyBtnblackGroundColor;
-/**按钮文字大小 */
+/**按钮文字大小  */
 @property (nonatomic,strong) UIFont * emptyBtnFont;
 
 //@optional

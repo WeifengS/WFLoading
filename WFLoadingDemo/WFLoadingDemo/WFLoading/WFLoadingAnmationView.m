@@ -73,7 +73,7 @@
 
 -(void)setConfig:(id <WFLoadingConfigDelgate>)config{
     if (config.images.count!=0) {
-        self.loadingImageArr = config.images;
+        self.loadingImageArr = [self getimages:config.images];
     }
     self.timeInterval = config.imageTimeInterval;
     self.msgLabel.text = config.loadingMsg;

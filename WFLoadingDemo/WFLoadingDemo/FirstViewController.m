@@ -19,7 +19,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
     WFLoadingConfig * config = [[WFLoadingConfig alloc]init];
-    config.images = @[];
+
     config.loadingMsg = @"我是单独加载一号……";
     config.emptyMsg = @"警告警告";
     config.emptyBtnTitle = @"再来";
@@ -29,6 +29,10 @@
         [weakSelf.view showLoading];
     };
     [self.view showLoadingWithConfig:config];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [weakSelf.view stopAnimating];
+    });
+    
     // Do any additional setup after loading the view.
 }
 

@@ -56,7 +56,9 @@
     [self showLoading];
 }
 -(void)showEmptyWithConfig:(WFLoadingConfig*)configModel{
-    [self.loadingView setConfig:configModel];
+    self.loadingView.config = configModel;
+    [self.loadingView startAnimating];
+    [self addSubview:self.loadingView];
     [self.loadingView hideLoading];
 }
 
