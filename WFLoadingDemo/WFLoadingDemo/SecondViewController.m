@@ -1,44 +1,44 @@
 //
-//  FirstViewController.m
+//  SecondViewController.m
 //  WFLoadingDemo
 //
-//  Created by Apple on 2018/10/9.
+//  Created by Apple on 2018/10/10.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "SecondViewController.h"
 #import "UIView+WFLoading.h"
-@interface FirstViewController ()
+
+@interface SecondViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation SecondViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-
     WFLoadingConfig * config = [[WFLoadingConfig alloc]init];
-    config.images = @[];
-    config.loadingMsg = @"我是单独加载一号……";
-    config.emptyMsg = @"警告警告";
-    config.emptyBtnTitle = @"再来";
+    NSMutableArray * arr = [NSMutableArray array];
+    for (int i = 1; i <= 32; i++) {
+        NSString * imageName = [NSString stringWithFormat:@"page_loading%u",i];
+        [arr addObject:imageName];
+    }
+    config.images = arr;
+    config.loadingMsg = @"我是单独加载……";
+    config.emptyMsg = @"独一无二的错误。。。";
+    config.emptyBtnTitle = @"再见";
     __weak typeof(self) weakSelf = self;
-    
     config.action = ^{
-        [weakSelf.view showLoading];
+        [weakSelf.view hideLoading];
     };
     [self.view showLoadingWithConfig:config];
     // Do any additional setup after loading the view.
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
--(void)dealloc{
-    NSLog(@"--dealloc--");
 }
 
 /*

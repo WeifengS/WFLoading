@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "UIView+WFLoading.h"
 #import "FirstViewController.h"
+#import "SecondViewController.h"
+#import "DefaultViewController.h"
+#import "UIView+Toast.h"
 
 @interface ViewController ()
 
@@ -18,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
 }
 
 
@@ -28,20 +31,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)presentVC:(UIButton *)sender {
-    FirstViewController * vc = [[FirstViewController alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-- (IBAction)setMyLoading:(UIButton *)sender {
-    WFLoadingConfig * config = [[WFLoadingConfig alloc]init];
-    config.loadingMsg = @"我与众不同";
-    config.loadingMsgTextColor = [UIColor purpleColor];
-    config.imageTimeInterval = 3;
-    [self.view showLoadingWithConfig:config];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.view hideLoading];
-    });
+
+
+- (IBAction)showDefultLoading:(UIButton *)sender {
+    [self.navigationController pushViewController:[DefaultViewController new] animated:YES];
     
+    
+}
+- (IBAction)showCustom1:(UIButton *)sender {
+    [self.navigationController pushViewController:[FirstViewController new] animated:YES];
+}
+- (IBAction)showCustom2:(UIButton *)sender {
+    [self.navigationController pushViewController:[SecondViewController new] animated:YES];
 }
 - (IBAction)action1:(UIButton *)sender {
     WFLoadingDefaultConfig * config = [WFLoadingDefaultConfig shareDefaultConfig];
@@ -49,7 +50,7 @@
     config.loadingMsgTextFont = [UIFont systemFontOfSize:11];
     config.loadingMsgTextColor = [UIColor redColor];
     config.emptyBtnTitle = @"消失";
-
+    [self.view makeToast:@"设置成功"];
     
     
 }
@@ -59,7 +60,7 @@
     config.loadingMsgTextFont = [UIFont systemFontOfSize:14];
     config.loadingMsgTextColor = [UIColor blueColor];
     config.emptyBtnTitle = @"再见";
-
+    [self.view makeToast:@"设置成功"];
     
     
 }
@@ -69,25 +70,9 @@
     config.loadingMsgTextFont = [UIFont systemFontOfSize:16];
     config.loadingMsgTextColor = [UIColor yellowColor];
     config.emptyBtnTitle = @"哟呵，再转一次";
+    [self.view makeToast:@"设置成功"];
+}
 
-    
-    
-}
-- (IBAction)loadingViewShow:(UIButton *)sender {
-    [self.view showLoading];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.view hideLoading];
-    });
-}
-- (IBAction)loadingEmptyShow:(UIButton *)sender {
-    __weak typeof(self) weakSelf = self;
-    [self.view showLoadingWithConfig:[WFLoadingConfig loadingWithBtnAction:^{
-        [weakSelf.view hideLoading];
-    }]];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.view stopAnimating];
-    });
-}
 
 
 @end

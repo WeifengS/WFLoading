@@ -1,44 +1,33 @@
 //
-//  FirstViewController.m
+//  DefaultViewController.m
 //  WFLoadingDemo
 //
-//  Created by Apple on 2018/10/9.
+//  Created by Apple on 2018/10/10.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "DefaultViewController.h"
 #import "UIView+WFLoading.h"
-@interface FirstViewController ()
+
+@interface DefaultViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation DefaultViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-
-    WFLoadingConfig * config = [[WFLoadingConfig alloc]init];
-    config.images = @[];
-    config.loadingMsg = @"我是单独加载一号……";
-    config.emptyMsg = @"警告警告";
-    config.emptyBtnTitle = @"再来";
-    __weak typeof(self) weakSelf = self;
-    
-    config.action = ^{
-        [weakSelf.view showLoading];
-    };
-    [self.view showLoadingWithConfig:config];
+    [self.view showLoading];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.view hideLoading];
+    });
     // Do any additional setup after loading the view.
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
--(void)dealloc{
-    NSLog(@"--dealloc--");
 }
 
 /*

@@ -25,6 +25,8 @@
 -(void)stopAnimating;
 /**根据配置文件控制loading界面*/
 -(void)showLoadingWithConfig:(WFLoadingConfig*)configModel;
+/**加载空白页*/
+-(void)showEmptyWithConfig:(WFLoadingConfig*)configModel;
 /**传入自定义的动画界面*/
 
 @end

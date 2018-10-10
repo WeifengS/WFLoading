@@ -10,6 +10,10 @@
 #import "WFLoadingConfigDelgate.h"
 
 @interface WFLoadingConfig : NSObject<WFLoadingConfigDelgate>
+/**
+ * loading界面配置，未填写项自动返回默认值，修改默认值可修改WFLoadingDefaultConfig属性
+
+ */
 
 /**loading加载文字*/
 @property (nonatomic,  copy) NSString * loadingMsg;
