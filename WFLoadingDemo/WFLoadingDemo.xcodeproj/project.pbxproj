@@ -218,7 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				1847F318216D9D4A00133BB6 /* Toast */,
-				18C16BAC216AF4F8006094CC /* SWFLoading */,
+				18C16BAC216AF4F8006094CC /* WFLoading */,
 				18C16B7A216AF4F2006094CC /* AppDelegate.h */,
 				18C16B7B216AF4F3006094CC /* AppDelegate.m */,
 				18C16B7D216AF4F3006094CC /* ViewController.h */,
@@ -258,7 +258,7 @@
 			path = WFLoadingDemoUITests;
 			sourceTree = "<group>";
 		};
-		18C16BAC216AF4F8006094CC /* SWFLoading */ = {
+		18C16BAC216AF4F8006094CC /* WFLoading */ = {
 			isa = PBXGroup;
 			children = (
 				1805E37F216C883500BFCB32 /* Images */,
@@ -276,7 +276,7 @@
 				1805E37C216C52E200BFCB32 /* WFLoadingDefaultConfig.m */,
 				1805E37E216C806D00BFCB32 /* WFLoadingConfigDelgate.h */,
 			);
-			path = SWFLoading;
+			path = WFLoading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
