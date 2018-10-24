@@ -23,7 +23,6 @@
 @property (nonatomic,assign) NSTimeInterval imageTimeInterval;
 
 
-
 /**提示页配置，如需显示提示页，请在loading结束后调用stop方法*/
 
 /**提示页图片*/
