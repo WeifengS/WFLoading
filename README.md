@@ -21,6 +21,7 @@ WFLoading 是一个快捷loading界面
 提供了默认配置类 WFLoadingDefaultConfig 可通过属性，配置全局默认loading界面！
 
     [WFLoadingDefaultConfig shareDefaultConfig];
+    
  通过修改其属性可修改默认loading，具体属性如下
 
 | 属性             	       | 作用                 | 
@@ -45,18 +46,24 @@ WFLoading 是一个快捷loading界面
 WFLoadingConfig 的各项属性与 WFLoadingDefaultConfig 相同 未填写字段会自动取默认值（WFLoadingDefaultConfig中的值）
 使用方法
 
-    WFLoadingConfig * config = [[WFLoadingConfig alloc]init]
- 	config.loadingMsg = @"我是单独加载一号……";
+    WFLoadingConfig * config = [[WFLoadingConfig alloc]init];
+    
+    config.loadingMsg = @"我是单独加载一号……";
+    
     /**提示页文字（若需要展示空白页）*/
     config.emptyMsg = @"网络请求失败，请检查您的网络链接……";
+    
+    /**提示页按钮*/
     config.emptyBtnTitle = @"点击重试";
-    __weak typeof(self) weakSelf = self;
+    
     /**按钮点击事件（只能单独配置，不能再全局中配置）*/
     config.action = ^{
-        [weakSelf.view showLoading];
+       NSLog("点击");
     };
+    
     /**展示默认loading动画*/
     [self.view showLoading];
+    
     /**根据配置展示loading*/
     [self.view showLoadingWithConfig:config];
     
