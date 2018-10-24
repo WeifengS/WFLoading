@@ -89,4 +89,6 @@ WFLoadingConfig 的各项属性与 WFLoadingDefaultConfig 相同 未填写字段
 
 WFLoadingConfig 与 WFLoadingDefaultConfig 配合使用 可减少代码量
 
+![image](https://github.com/WeifengShi1/WFLoading/blob/master/QQ20181024-141623-HD.gif )
+
 如果您有更好的意见或建议，欢迎留言评论！如果喜欢，欢迎star！
