@@ -25,7 +25,7 @@ WFLoading 是一个快捷loading界面
  通过修改其属性可修改默认loading，具体属性如下
 
 | 属性             	       | 作用                 | 
-| :-------------:	       | :-------------:      | 
+| :-------------	       | :-------------:     | 
 | loadingMsg               | loading加载文字       | 
 | loadingMsgTextColor      | loading加载文字颜色    | 
 | loadingMsgTextFont       | loading加载文字       | 
