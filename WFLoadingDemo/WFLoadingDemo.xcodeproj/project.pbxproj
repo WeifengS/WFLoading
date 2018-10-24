@@ -32,6 +32,7 @@
 		1805E3AA216C921000BFCB32 /* loading3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1805E396216C920F00BFCB32 /* loading3@3x.png */; };
 		1805E3AB216C921000BFCB32 /* loading12@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1805E397216C920F00BFCB32 /* loading12@3x.png */; };
 		1805E3BE216CA5A700BFCB32 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1805E3BD216CA5A700BFCB32 /* FirstViewController.m */; };
+		180A73CA218046BF00C5A402 /* QQ20181024-141623-HD.gif in Resources */ = {isa = PBXBuildFile; fileRef = 180A73C9218046BE00C5A402 /* QQ20181024-141623-HD.gif */; };
 		1847F314216D994800133BB6 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847F313216D994800133BB6 /* SecondViewController.m */; };
 		1847F317216D995700133BB6 /* DefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847F316216D995700133BB6 /* DefaultViewController.m */; };
 		1847F31B216D9D4A00133BB6 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847F31A216D9D4A00133BB6 /* UIView+Toast.m */; };
@@ -97,6 +98,7 @@
 		1805E397216C920F00BFCB32 /* loading12@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading12@3x.png"; sourceTree = "<group>"; };
 		1805E3BC216CA5A700BFCB32 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		1805E3BD216CA5A700BFCB32 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		180A73C9218046BE00C5A402 /* QQ20181024-141623-HD.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "QQ20181024-141623-HD.gif"; sourceTree = "<group>"; };
 		1847F312216D994800133BB6 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		1847F313216D994800133BB6 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		1847F315216D995700133BB6 /* DefaultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultViewController.h; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 		18C16B79216AF4F2006094CC /* WFLoadingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				180A73C9218046BE00C5A402 /* QQ20181024-141623-HD.gif */,
 				1847F318216D9D4A00133BB6 /* Toast */,
 				18C16BAC216AF4F8006094CC /* WFLoading */,
 				18C16B7A216AF4F2006094CC /* AppDelegate.h */,
@@ -410,6 +413,7 @@
 				1805E3A7216C921000BFCB32 /* loading10@3x.png in Resources */,
 				1805E398216C920F00BFCB32 /* loading2@3x.png in Resources */,
 				1805E3A9216C921000BFCB32 /* loading1@3x.png in Resources */,
+				180A73CA218046BF00C5A402 /* QQ20181024-141623-HD.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
