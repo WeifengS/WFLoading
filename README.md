@@ -1,7 +1,7 @@
 # WFLoading
 WFLoading 是一个快捷loading界面
 
-###基本用法
+### 基本用法
 将WFLoading文件夹拖到项目中，使用的界面导入头文件#import "UIView+WFLoading.h"即可
 
 展示默认loading界面
