@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WFLoading"
-  s.version      = "0.0.1"
-  s.summary      = "A short description of WFLoading."
+  s.version      = "1.0.0"
+  s.summary      = "快速展示loading与提示页"
   
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
