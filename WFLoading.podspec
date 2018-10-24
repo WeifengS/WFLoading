@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "WFLoading"
   s.version      = "0.0.1"
-  s.summary      = "A short description of WFLoading."
+  s.summary      = "A short description of WFLoading"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   #
 
   s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
