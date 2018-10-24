@@ -6,7 +6,7 @@ WFLoading 是一个快捷loading界面
  使用的界面导入头文件#import "UIView+WFLoading.h"即可
 2.pod导入
 
-pod 'WFLoading','1.0.1'
+    pod 'WFLoading','1.0.1'
 
 展示默认loading界面
 
