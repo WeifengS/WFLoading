@@ -8,6 +8,12 @@ WFLoading 是一个快捷loading界面
 2.pod导入
 
     pod 'WFLoading','1.0.1'
+    
+若pod无法找到  请先在终端执行
+    
+    pod repo update
+
+更新本地索引后重新pod
 
 展示默认loading界面
 
