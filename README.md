@@ -46,7 +46,7 @@ WFLoading 是一个快捷loading界面
 | emptyBtnFont             | 按钮文字               | 
 
 
-####提供了单独配置类 WFLoadingConfig 可以在每个界面定制不同的loading  或者定制不同的提示页
+#### 提供了单独配置类 WFLoadingConfig 可以在每个界面定制不同的loading  或者定制不同的提示页
 
 WFLoadingConfig 的各项属性与 WFLoadingDefaultConfig 相同 未填写字段会自动取默认值（WFLoadingDefaultConfig中的值）
 使用方法
