@@ -15,6 +15,8 @@ WFLoading 是一个快捷loading界面
 
 更新本地索引后重新pod
 
+----
+
 展示默认loading界面
 
     [self.view showLoading];
