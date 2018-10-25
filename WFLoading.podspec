@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.homepage     = "https://github.com/WeifengShi1/WFLoading.git"
+  s.homepage     = "https://github.com/WeifengS/WFLoading.git"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -50,10 +50,10 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "WeifengShi1" => "568003346@qq.com" }
-  # Or just: s.author    = "WeifengShi1"
-  # s.authors            = { "WeifengShi1" => "568003346@qq.com" }
-  # s.social_media_url   = "http://twitter.com/WeifengShi1"
+  s.author             = { "WeifengS" => "568003346@qq.com" }
+  # Or just: s.author    = "WeifengS"
+  # s.authors            = { "WeifengS" => "568003346@qq.com" }
+  # s.social_media_url   = "http://twitter.com/WeifengS"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/WeifengShi1/WFLoading.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/WeifengS/WFLoading.git", :tag => "#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
